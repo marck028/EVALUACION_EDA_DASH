@@ -60,3 +60,20 @@ st.plotly_chart(line_chart, use_container_width=True)
 st.subheader("Distribución de Productos Financieros por Rango de Edad")
 stacked_column_chart = px.histogram(filtered_data, x='Rango_Edad', color='depositos_cuentas_ahorro', barmode='stack')
 st.plotly_chart(stacked_column_chart, use_container_width=True)
+
+
+st.subheader("Distribución de Clientes por Rango de Edad")
+hist_chart = px.histogram(filtered_data, x='Rango_Edad', nbins=10, title="Distribución de Edad de los Clientes")
+st.plotly_chart(hist_chart, use_container_width=True)
+
+st.subheader("Distribución de Ingresos por Nivel de Educación")
+box_plot = px.box(filtered_data, x='Nivel_educacion', y='plan_economico_mensual', color='Nivel_educacion', title="Ingresos según Nivel de Educación")
+st.plotly_chart(box_plot, use_container_width=True)
+
+st.subheader("Uso de Préstamos según Situación Laboral")
+stacked_bar_chart = px.histogram(filtered_data, x='Situacion_Laboral', color='prestamos_personales', barmode='stack', title="Uso de Préstamos por Situación Laboral")
+st.plotly_chart(stacked_bar_chart, use_container_width=True)
+
+st.subheader("Familiaridad con Préstamos vs Nivel Socioeconómico")
+scatter_plot = px.scatter(filtered_data, x='nivel_socieconomico', y='prestamos_personales', color='nivel_socieconomico', title="Familiaridad con Préstamos por Nivel Socioeconómico")
+st.plotly_chart(scatter_plot, use_container_width=True)
