@@ -41,9 +41,10 @@ stacked_bar_chart = px.histogram(filtered_data, x='nivel_socieconomico', color='
 st.plotly_chart(stacked_bar_chart, use_container_width=True)
 
 # Gráfico de Dispersión: Relación entre menores y mayores de edad en el grupo familiar
-st.subheader("Relación entre Menores y Mayores de Edad en el Grupo Familiar")
-scatter_plot = px.scatter(filtered_data, x='menores_edad', y='mayores_edad', color='Genero')
-st.plotly_chart(scatter_plot, use_container_width=True)
+# st.subheader("Relación entre Menores y Mayores de Edad en el Grupo Familiar")
+# scatter_plot = px.scatter(filtered_data, x='menores_edad', y='mayores_edad', color='Genero')
+# st.plotly_chart(scatter_plot, use_container_width=True)
+
 
 # Mapa de Calor: Nivel de educación y uso de tarjeta de crédito
 st.subheader("Nivel de Educación y Uso de Tarjeta de Crédito")
@@ -52,9 +53,9 @@ heatmap = px.imshow(heatmap_data, labels=dict(x="Uso de Tarjeta de Crédito", y=
 st.plotly_chart(heatmap, use_container_width=True)
 
 # Gráfico de Área: Conceptos de ahorro e inversión a través de diferentes niveles socioeconómicos
-st.subheader("Conceptos de Ahorro e Inversión por Nivel Socioeconómico")
-line_chart = px.area(filtered_data, x='nivel_socieconomico', y='conceptos_ahorro_inversion', color='nivel_socieconomico')
-st.plotly_chart(line_chart, use_container_width=True)
+# st.subheader("Conceptos de Ahorro e Inversión por Nivel Socioeconómico")
+# line_chart = px.area(filtered_data, x='nivel_socieconomico', y='conceptos_ahorro_inversion', color='nivel_socieconomico')
+# st.plotly_chart(line_chart, use_container_width=True)
 
 # Gráfico de Columnas Apiladas con Filtro: Distribución de productos financieros por rango de edad
 st.subheader("Distribución de Productos Financieros por Rango de Edad")
